@@ -1,0 +1,32 @@
+name: "yugen_domain"
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '*/6 * * * *'
+jobs:
+  yugen_domain:
+    name: "yugen_domain"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+            pip install --upgrade pip
+            pip install httpx
+      - name: Run get_domain.py
+        run: |
+            python "get_domain.py"
+        
+      - name: Auto Commit with message
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "current domain"
+          file_pattern: "domains.json" 
+          repository: .
+          skip_fetch: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          

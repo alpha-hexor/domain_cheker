@@ -44,7 +44,7 @@ zoro_domain = s.url
 data = {
     "yugen_main_domain" : main_domain,
     "yugen_api_domain" : api_domain,
-    "zoror_main_domain" : zoro_domain,
+    "zoror_main_domain" : str(zoro_domain),
     "yugen_status_code" : str(r.status_code),
     "zoro_status_code" : str(s.status_code)
 }

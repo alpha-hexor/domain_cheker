@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: '*/6 * * * *'
+    - cron: "0 */1 * * *"
 jobs:
   yugen_domain:
     name: "yugen_domain"

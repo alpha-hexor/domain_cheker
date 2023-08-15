@@ -40,7 +40,7 @@ else:
 
 data = {
     "main_domain" : main_domain,
-    "api_domain" : api_domain
+    "api_domain" : api_domain,
     "status_code" : str(r.status_code)
 }
 

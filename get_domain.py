@@ -47,6 +47,16 @@ data = {
     "zoror_main_domain" : str(zoro_domain),
     "yugen_status_code" : str(r.status_code),
     "zoro_status_code" : str(s.status_code)
+
+    "yugen_trending_regex" : "<a class=\"series-item\" href=\"(.*?)\" .+<img src=\"(.*?)\\\"\\s+alt=\"(.*?)\"",
+
+    "yugen_search_regex" : "href=\"(/anime/.*?)\" title=\"(.*?)\">.+<img data-src=\"(.*?)\"" ,
+
+    "yugen_sub_ep_regex" : "<div class=\"ap-.+?\">Episodes</div><span class=\"description\" .+?>([0-9]+)</span></div>" ,
+
+    "yugen_dub_ep_regex" : "<div class=\"ap-.+?\">Episodes \\(Dub\\)</div><span class=\"description\" .+?>([0-9]+)</span></div>" ,
+
+    "yugen_id_regex" : "/anime/(.*?)/(.*)";
 }
 
 with open("domains.json", "w") as json_file:

@@ -37,11 +37,13 @@ else:
     main_domain = ""
     api_domain = ""
 
+s = client.get("https://www.google.com")
 
 data = {
     "main_domain" : main_domain,
     "api_domain" : api_domain,
-    "status_code" : str(r.status_code)
+    "status_code" : str(r.status_code),
+    "google_code" : str(s.status_code)
 }
 
 with open("domains.json", "w") as json_file:

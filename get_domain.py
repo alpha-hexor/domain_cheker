@@ -63,6 +63,6 @@ with open("domains.json", "w") as json_file:
 json_file.close()
 
 with open("regex.json","w") as regex_json:
-    json.dump(regex)
+    json.dump(regex,regex_json)
 regex_json.close()
 

@@ -24,7 +24,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "current domain and regex"
-          file_pattern: "*.json *.txt" 
+          file_pattern: "*.json *.html" 
           repository: .
           skip_fetch: false
         env:

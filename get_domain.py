@@ -64,7 +64,7 @@ x.close()
 with open('rewards.html','a') as f:
   f.write("<html><body>\n")
   for i in p:
-    f.write(f'''<a href="{i['data']}">Link for {i['created_at']}</a>\n\n''')
+    f.write(f'''<a href="{i['data']}">Link for {i['created_at']}</a><br><br>''')
   f.write("</body></html>")
 f.close()
 

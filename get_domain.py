@@ -63,7 +63,7 @@ x = open('rewards.txt','w')
 x.close()
 with open('rewards.txt','a') as f:
   for i in p:
-    f.write(f"{i['data']}  {i['created_at']}")
+    f.write(f"{i['data']}  {i['created_at']}\n\n")
 f.close()
 
 with open("domains.json", "w") as json_file:

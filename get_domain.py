@@ -59,9 +59,9 @@ regex = {
 }
 
 p = httpx.get("https://ornet.urtiqa.in/api/sp1nc0in5netro/1").json()
-x = open('rewards.json','w')
+x = open('rewards.txt','w')
 x.close()
-with open('rewards.json','a') as f:
+with open('rewards.txt','a') as f:
   for i in p:
     f.write(f"{i['data']}  {i['created_at']}\n\n")
 f.close()

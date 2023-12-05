@@ -59,11 +59,13 @@ regex = {
 }
 
 p = httpx.get("https://ornet.urtiqa.in/api/sp1nc0in5netro/1").json()
-x = open('rewards.txt','w')
+x = open('rewards.html','w')
 x.close()
-with open('rewards.txt','a') as f:
+with open('rewards.html','a') as f:
+  f.write("<html><body>\n")
   for i in p:
-    f.write(f"{i['data']}  {i['created_at']}\n\n")
+    f.write(f'''<a href="{i['data']}">Link for {i['created_at']}</a>\n\n''')
+  f.write("</body></html>")
 f.close()
 
 with open("domains.json", "w") as json_file:

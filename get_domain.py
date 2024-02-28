@@ -58,15 +58,6 @@ regex = {
     "yugen_id_regex" : '/anime/(.*?)/(.*)'
 }
 
-p = httpx.get("https://ornet.urtiqa.in/api/sp1nc0in5netro/1").json()
-x = open('rewards.html','w')
-x.close()
-with open('rewards.html','a') as f:
-  f.write("<html><body>\n")
-  for i in p:
-    f.write(f'''<a href="{i['data']}">Link for {i['created_at']}</a><br><br>''')
-  f.write("</body></html>")
-f.close()
 
 with open("domains.json", "w") as json_file:
     json.dump(data, json_file)
